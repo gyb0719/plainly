@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>Plainly</title>
+</head>
+<body>
+  <div class="popup-container">
+    <header class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 128 128" fill="none">
+          <rect width="128" height="128" rx="24" fill="var(--color-accent)"/>
+          <text x="64" y="78" font-family="system-ui" font-size="48" font-weight="600" fill="white" text-anchor="middle">P</text>
+        </svg>
+        <span class="logo-text">Plainly</span>
+      </div>
+      <button id="toggle-translate" class="toggle-btn" aria-label="번역 토글">
+        <span class="toggle-track">
+          <span class="toggle-thumb"></span>
+        </span>
+      </button>
+    </header>
+
+    <section class="language-section">
+      <button id="source-lang" class="lang-btn">
+        <span class="lang-code">EN</span>
+        <span class="lang-name">English</span>
+      </button>
+      <button id="swap-lang" class="swap-btn" aria-label="언어 교환">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M7 16L3 12M3 12L7 8M3 12H21M17 8L21 12M21 12L17 16"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button id="target-lang" class="lang-btn">
+        <span class="lang-code">KO</span>
+        <span class="lang-name">한국어</span>
+      </button>
+    </section>
+
+    <section class="translation-section">
+      <div class="input-area">
+        <textarea
+          id="source-text"
+          placeholder="번역할 텍스트를 입력하세요..."
+          rows="4"
+        ></textarea>
+        <button id="clear-input" class="icon-btn clear-btn" aria-label="지우기">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="output-area">
+        <div id="translated-text" class="translated-text">
+          <span class="placeholder">번역 결과가 여기에 표시됩니다</span>
+        </div>
+        <button id="copy-result" class="icon-btn copy-btn" aria-label="복사">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5"
+                  stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="powered-by">Powered by DeepSeek</span>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.ts"></script>
+</body>
+</html>
