@@ -36,8 +36,7 @@ export type MessageType =
   | 'TOGGLE_TRANSLATION'
   | 'GET_STATUS'
   | 'UPDATE_SETTINGS'
-  | 'TRANSLATE_SELECTION'
-  | 'TRANSLATE_SELECTION_SHORTCUT';
+  | 'TRANSLATE_SELECTION';
 
 export interface Message<T = unknown> {
   type: MessageType;

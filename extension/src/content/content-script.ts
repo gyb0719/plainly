@@ -68,14 +68,6 @@ class PlainlyContentScript {
         return false;
       }
 
-      if (message.type === 'TRANSLATE_SELECTION_SHORTCUT') {
-        const selection = window.getSelection()?.toString().trim();
-        if (selection) {
-          this.translateSelection(selection);
-        }
-        return false;
-      }
-
       return false;
     });
   }

@@ -16,13 +16,6 @@
         "mac": "Alt+A"
       },
       "description": "번역 토글"
-    },
-    "translate-selection": {
-      "suggested_key": {
-        "default": "Alt+Shift+A",
-        "mac": "Alt+Shift+A"
-      },
-      "description": "선택 텍스트 번역"
     }
   },
   "host_permissions": [
